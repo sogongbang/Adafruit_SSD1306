@@ -55,7 +55,9 @@ typedef uint32_t PortMask;
     !defined(ARDUINO_ARCH_MBED) && !defined(ARDUINO_ARCH_RP2040)
 typedef volatile uint32_t PortReg;
 typedef uint32_t PortMask;
+#if not defined(ADAFRUIT_BUSIO_NOT_USE_FAST_PINIO)
 #define HAVE_PORTREG
+#endif
 #endif
 
 /// The following "raw" color names are kept for backwards client compatability
